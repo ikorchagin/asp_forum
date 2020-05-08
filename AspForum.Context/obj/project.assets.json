@@ -1188,11 +1188,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.Context\\AspForum.Context.csproj",
+      "projectUniqueName": "C:\\Users\\nYear\\Desktop\\asp-forum\\AspForum.Context\\AspForum.Context.csproj",
       "projectName": "AspForum.Context",
-      "projectPath": "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.Context\\AspForum.Context.csproj",
+      "projectPath": "C:\\Users\\nYear\\Desktop\\asp-forum\\AspForum.Context\\AspForum.Context.csproj",
       "packagesPath": "C:\\Users\\nYear\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.Context\\obj\\",
+      "outputPath": "C:\\Users\\nYear\\Desktop\\asp-forum\\AspForum.Context\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nYear\\AppData\\Roaming\\NuGet\\NuGet.Config",

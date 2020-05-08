@@ -1339,11 +1339,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.API\\AspForum.API.csproj",
+      "projectUniqueName": "C:\\Users\\nYear\\Desktop\\asp-forum\\AspForum.API\\AspForum.API.csproj",
       "projectName": "AspForum.API",
-      "projectPath": "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.API\\AspForum.API.csproj",
+      "projectPath": "C:\\Users\\nYear\\Desktop\\asp-forum\\AspForum.API\\AspForum.API.csproj",
       "packagesPath": "C:\\Users\\nYear\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.API\\obj\\",
+      "outputPath": "C:\\Users\\nYear\\Desktop\\asp-forum\\AspForum.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nYear\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1359,8 +1359,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.Context\\AspForum.Context.csproj": {
-              "projectPath": "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.Context\\AspForum.Context.csproj"
+            "C:\\Users\\nYear\\Desktop\\asp-forum\\AspForum.Context\\AspForum.Context.csproj": {
+              "projectPath": "C:\\Users\\nYear\\Desktop\\asp-forum\\AspForum.Context\\AspForum.Context.csproj"
             }
           }
         }

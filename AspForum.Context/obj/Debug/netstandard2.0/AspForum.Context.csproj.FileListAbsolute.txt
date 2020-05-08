@@ -1,9 +1,0 @@
-C:\Users\nYear\Desktop\AspForum\AspForum.Context\bin\Debug\netstandard2.0\AspForum.Context.deps.json
-C:\Users\nYear\Desktop\AspForum\AspForum.Context\bin\Debug\netstandard2.0\AspForum.Context.dll
-C:\Users\nYear\Desktop\AspForum\AspForum.Context\bin\Debug\netstandard2.0\AspForum.Context.pdb
-C:\Users\nYear\Desktop\AspForum\AspForum.Context\obj\Debug\netstandard2.0\AspForum.Context.csprojAssemblyReference.cache
-C:\Users\nYear\Desktop\AspForum\AspForum.Context\obj\Debug\netstandard2.0\AspForum.Context.csproj.CoreCompileInputs.cache
-C:\Users\nYear\Desktop\AspForum\AspForum.Context\obj\Debug\netstandard2.0\AspForum.Context.AssemblyInfoInputs.cache
-C:\Users\nYear\Desktop\AspForum\AspForum.Context\obj\Debug\netstandard2.0\AspForum.Context.AssemblyInfo.cs
-C:\Users\nYear\Desktop\AspForum\AspForum.Context\obj\Debug\netstandard2.0\AspForum.Context.dll
-C:\Users\nYear\Desktop\AspForum\AspForum.Context\obj\Debug\netstandard2.0\AspForum.Context.pdb

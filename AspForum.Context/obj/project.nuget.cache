@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8doMC2ivwxzXXNOs/ruce6AHB1SOgpfH0QKsofL2dmgSjn2cwo96PLI4S9J8Zw5V6yxSKOd6EmCBkpDlOpdtZA==",
+  "dgSpecHash": "KWXREsWAcc9Q+3k2i/wpirWKF0lBnUdbRYNq8l6OoH3di9hxA+FF3Q7/S86HS/ME4CupgdkcMNQREMETjVDQCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.Context\\AspForum.Context.csproj",
+  "projectFilePath": "C:\\Users\\nYear\\Desktop\\asp-forum\\AspForum.Context\\AspForum.Context.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nYear\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\nYear\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
