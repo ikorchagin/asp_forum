@@ -8,15 +8,8 @@ namespace AspForum.Context
 {
     public class ForumContext : DbContext
     {
-        private IOptions<ForumContextSettings> _options;
-        public ForumContext(IOptions<ForumContextSettings> options) : base(new DbContextOptionsBuilder<ForumContext>().Options)
+        public ForumContext(DbContextOptions<ForumContext> options) : base(options)
         {
-            _options = options;
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlite(_options.Value.ConnectionString);
         }
 
         public DbSet<Rubric> Rubric { get; set; }
