@@ -80,13 +80,9 @@ namespace AspForum.Context.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Rubric");
+                    b.ToTable("Rubrics");
                 });
 
             modelBuilder.Entity("AspForum.Context.Entities.Article", b =>

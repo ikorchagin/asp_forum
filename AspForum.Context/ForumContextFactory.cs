@@ -1,18 +1,15 @@
-﻿using System.Linq;
-using System;
-using System.IO;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
-using Microsoft.Extensions.Configuration.FileExtensions;
-using Microsoft.Extensions.Configuration.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
 
 namespace AspForum.Context
 {
-    public class ForumContextFactory : IDesignTimeDbContextFactory<ForumContext>
+/*    public class ForumContextFactory : IDesignTimeDbContextFactory<ForumContext>
     {
         public ForumContext CreateDbContext(string[] args)
         {
@@ -26,8 +23,7 @@ namespace AspForum.Context
 
             var builder = new DbContextOptionsBuilder<ForumContext>();
             builder.UseSqlite(connectionString);
-
             return new ForumContext(builder.Options);
         }
-    }
+    }*/
 }
