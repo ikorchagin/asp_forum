@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.Context\\AspForum.Context.csproj": {}
+    "C:\\Users\\nYear\\Desktop\\asp_forum\\AspForum.Context\\AspForum.Context.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.Context\\AspForum.Context.csproj": {
+    "C:\\Users\\nYear\\Desktop\\asp_forum\\AspForum.Context\\AspForum.Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.Context\\AspForum.Context.csproj",
+        "projectUniqueName": "C:\\Users\\nYear\\Desktop\\asp_forum\\AspForum.Context\\AspForum.Context.csproj",
         "projectName": "AspForum.Context",
-        "projectPath": "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.Context\\AspForum.Context.csproj",
+        "projectPath": "C:\\Users\\nYear\\Desktop\\asp_forum\\AspForum.Context\\AspForum.Context.csproj",
         "packagesPath": "C:\\Users\\nYear\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nYear\\Desktop\\AspForum\\AspForum.Context\\obj\\",
+        "outputPath": "C:\\Users\\nYear\\Desktop\\asp_forum\\AspForum.Context\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nYear\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\nYear\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -9,7 +9,6 @@ namespace AspForum.Context
     {
         public ForumContext(DbContextOptions<ForumContext> options) : base(options)
         {
-
         }
 
         public DbSet<Article> Articles { get; set; }

@@ -10,3 +10,15 @@ C:\Users\nYear\Desktop\AspForum\AspForum.Context\obj\Debug\netcoreapp3.1\AspForu
 C:\Users\nYear\Desktop\AspForum\AspForum.Context\obj\Debug\netcoreapp3.1\AspForum.Context.pdb
 C:\Users\nYear\Desktop\AspForum\AspForum.Context\obj\Debug\netcoreapp3.1\AspForum.Context.genruntimeconfig.cache
 C:\Users\nYear\Desktop\AspForum\AspForum.Context\obj\Debug\netcoreapp3.1\AspForum.Context.csproj.CoreCompileInputs.cache
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\bin\Debug\netcoreapp3.1\AspForum.Context.deps.json
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\bin\Debug\netcoreapp3.1\AspForum.Context.runtimeconfig.json
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\bin\Debug\netcoreapp3.1\AspForum.Context.runtimeconfig.dev.json
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\bin\Debug\netcoreapp3.1\AspForum.Context.dll
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\bin\Debug\netcoreapp3.1\AspForum.Context.pdb
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\obj\Debug\netcoreapp3.1\AspForum.Context.csprojAssemblyReference.cache
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\obj\Debug\netcoreapp3.1\AspForum.Context.csproj.CoreCompileInputs.cache
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\obj\Debug\netcoreapp3.1\AspForum.Context.AssemblyInfoInputs.cache
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\obj\Debug\netcoreapp3.1\AspForum.Context.AssemblyInfo.cs
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\obj\Debug\netcoreapp3.1\AspForum.Context.dll
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\obj\Debug\netcoreapp3.1\AspForum.Context.pdb
+C:\Users\nYear\Desktop\asp_forum\AspForum.Context\obj\Debug\netcoreapp3.1\AspForum.Context.genruntimeconfig.cache
