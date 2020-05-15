@@ -34,12 +34,14 @@ namespace AspForum.API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<ArticleViewModel>> GetArticle(int id)
         {
-            var article = new ArticleViewModel(await _context.Articles.FindAsync(id));
+            var articleDbSet = await _context.Articles.FindAsync(id);
 
-            if (article == null)
+            if (articleDbSet == null)
             {
                 return NotFound();
             }
+
+            var article = new ArticleViewModel(articleDbSet);
 
             return article;
         }
