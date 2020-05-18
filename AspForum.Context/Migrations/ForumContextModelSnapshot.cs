@@ -14,7 +14,7 @@ namespace AspForum.Context.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.3");
+                .HasAnnotation("ProductVersion", "3.1.4");
 
             modelBuilder.Entity("AspForum.Context.Entities.Article", b =>
                 {
@@ -25,7 +25,7 @@ namespace AspForum.Context.Migrations
                     b.Property<DateTime>("PostDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("RubricId")
+                    b.Property<int?>("RubricId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Text")
@@ -36,9 +36,14 @@ namespace AspForum.Context.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
                     b.HasIndex("RubricId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Articles");
                 });
@@ -49,23 +54,21 @@ namespace AspForum.Context.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("ArticleId")
+                    b.Property<int?>("ArticleId")
                         .HasColumnType("INTEGER");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("PostDate")
-                        .HasColumnType("TEXT");
 
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ArticleId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Comments");
                 });
@@ -85,20 +88,50 @@ namespace AspForum.Context.Migrations
                     b.ToTable("Rubrics");
                 });
 
+            modelBuilder.Entity("AspForum.Context.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("AspForum.Context.Entities.Article", b =>
                 {
                     b.HasOne("AspForum.Context.Entities.Rubric", "Rubric")
                         .WithMany("Articles")
-                        .HasForeignKey("RubricId")
+                        .HasForeignKey("RubricId");
+
+                    b.HasOne("AspForum.Context.Entities.User", "User")
+                        .WithMany("Articles")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
             modelBuilder.Entity("AspForum.Context.Entities.Comment", b =>
                 {
-                    b.HasOne("AspForum.Context.Entities.Article", "Article")
+                    b.HasOne("AspForum.Context.Entities.Article", null)
                         .WithMany("Comments")
-                        .HasForeignKey("ArticleId")
+                        .HasForeignKey("ArticleId");
+
+                    b.HasOne("AspForum.Context.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

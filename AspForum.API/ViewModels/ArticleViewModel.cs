@@ -1,22 +1,18 @@
-﻿using AspForum.Context.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AspForum.Data.Models;
 
 namespace AspForum.API.ViewModels
 {
     public class ArticleViewModel
     {
-        public ArticleViewModel(Article article)
+        public ArticleViewModel(ArticleModel article)
         {
             Id = article.Id;
             Title = article.Title;
             Text = article.Text;
-            PostDate = article.PostDate.ToString("yyyy-MM-dd");
-            RubricName = article.Rubric.Name;
+            PostDate = article.PostDate.ToString("yyyy-MM-dd HH:mm");
+            RubricId = article.Rubric.Id;
+            UserId = article.User.Id;
         }
-
         public int Id { get; set; }
 
         public string Title { get; set; }
@@ -25,6 +21,8 @@ namespace AspForum.API.ViewModels
 
         public string PostDate { get; set; }
 
-        public string RubricName { get; set; }
+        public int? RubricId { get; set; }
+
+        public int? UserId { get; set; }
     }
 }

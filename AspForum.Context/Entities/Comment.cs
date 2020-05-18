@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace AspForum.Context.Entities
 {
@@ -11,15 +9,10 @@ namespace AspForum.Context.Entities
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; }
-
-        [Required]
         public string Text { get; set; }
 
-        [Required]
-        public DateTime PostDate { get; set; } = DateTime.Now;
+        public int UserId{ get;set; }
 
-        public Article Article { get; set; }
-        public int ArticleId { get; set; }
+        public virtual User User { get; set; }
     }
 }

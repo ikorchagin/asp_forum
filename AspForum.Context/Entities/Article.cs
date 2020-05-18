@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace AspForum.Context.Entities
 {
@@ -16,13 +16,14 @@ namespace AspForum.Context.Entities
         [Required]
         public string Text { get; set; }
 
-        [Required]
         public DateTime PostDate { get; set; } = DateTime.Now;
 
-        public List<Comment> Comments { get; set; }
+        public IEnumerable<Comment> Comments { get; set; }
 
-        public int RubricId { get; set; }
-        public Rubric Rubric { get; set; }
+        public virtual Rubric Rubric { get; set; }
+        public int? RubricId { get; set; }
 
+        public virtual User User { get; set; }
+        public int UserId { get; set; }
     }
 }

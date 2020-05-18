@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AspForum.Context;
+using AspForum.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,7 +12,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 using Microsoft.Extensions.Logging;
 
 namespace AspForum.API
@@ -29,11 +28,10 @@ namespace AspForum.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers().AddNewtonsoftJson(options => 
-                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-            services.AddDbContext<ForumContext>(options => options.
-                UseSqlite($"Data Source={Directory.GetParent(Directory.GetCurrentDirectory())}\\forumDb.db",
-                x => x.MigrationsAssembly("AspForum.Context")));
+            services.AddControllers();
+            services.AddScoped<IArticlesRepo, ArticlesRepo>();
+            services.AddDbContext<ForumContext>(option => 
+                option.UseSqlite(Configuration.GetConnectionString("ForumConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
