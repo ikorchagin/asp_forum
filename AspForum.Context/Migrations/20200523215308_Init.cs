@@ -28,7 +28,8 @@ namespace AspForum.Context.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Email = table.Column<string>(nullable: false),
                     Password = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: true),
+                    Role = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -72,7 +73,8 @@ namespace AspForum.Context.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Text = table.Column<string>(nullable: false),
                     UserId = table.Column<int>(nullable: false),
-                    ArticleId = table.Column<int>(nullable: true)
+                    ArticleId = table.Column<int>(nullable: false),
+                    PostDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -82,7 +84,7 @@ namespace AspForum.Context.Migrations
                         column: x => x.ArticleId,
                         principalTable: "Articles",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Comments_Users_UserId",
                         column: x => x.UserId,

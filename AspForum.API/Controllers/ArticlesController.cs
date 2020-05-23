@@ -12,17 +12,51 @@ namespace AspForum.API.Controllers
     [Route("api/[controller]")]
     public class ArticlesController : ControllerBase
     {
-        private readonly IArticlesRepo _articlesRepo;
+        private readonly IArticlesRepo _repo;
 
-        public ArticlesController(IArticlesRepo articlesRepo)
+        public ArticlesController(IArticlesRepo repo)
         {
-            _articlesRepo = articlesRepo;
+            _repo = repo;
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<ArticleViewModel>> Get()
+        public ActionResult<IEnumerable<GetArticleViewModel>> Get()
         {
-            return Ok(_articlesRepo.GetAllArticles().Select(x => new ArticleViewModel(x)));
+            var articles = _repo.GetAllArticles();
+            return Ok(articles.Select(x => new GetArticleViewModel(x)));
+        }
+
+        [HttpGet("rubric/{id}")]
+        public ActionResult<IEnumerable<GetArticleViewModel>> GetByRubric(int id)
+        {
+            return Ok(_repo.GetArticlesByRubric(id)?.Select(x => new GetArticleViewModel(x)));
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<IEnumerable<GetArticleViewModel>> GetById(int id)
+        {
+            var article = _repo.GetArticleById(id);
+
+            if (article.Id == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(new GetArticleViewModel(article));
+        }
+
+        [HttpPost]
+        public void Post([FromBody]SetArticleViewModel article)
+        {
+            _repo.AddArticle(article.Title, article.Text, article.RubricId, 1);
+            _repo.SaveChanges();
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            _repo.DeleteArticle(id);
+            _repo.SaveChanges();
         }
     }
 }

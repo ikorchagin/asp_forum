@@ -1,3 +1,4 @@
+using System;
 using AspForum.Context.Entities;
 
 namespace AspForum.Data.Models
@@ -9,6 +10,7 @@ namespace AspForum.Data.Models
             Id = comment.Id;
             Text = comment.Text;
             User = new UserModel(comment.User);
+            PostDate = comment.PostDate;
         }
 
         public int Id { get; set; }
@@ -16,5 +18,7 @@ namespace AspForum.Data.Models
         public string Text { get; set; }
 
         public UserModel User { get; set; }
+
+        public DateTime PostDate { get; set; }
     }
 }

@@ -29,7 +29,9 @@ namespace AspForum.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IArticlesRepo, ArticlesRepo>();
+            services.AddScoped<IArticlesRepo, ArticlesRepo>()
+                .AddScoped<IRubricsRepo, RubricsRepo>()
+                .AddScoped<ICommentsRepo, CommentsRepo>();
             services.AddDbContext<ForumContext>(option => 
                 option.UseSqlite(Configuration.GetConnectionString("ForumConnection")));
         }

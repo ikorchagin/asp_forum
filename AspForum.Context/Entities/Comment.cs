@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,5 +15,11 @@ namespace AspForum.Context.Entities
         public int UserId{ get;set; }
 
         public virtual User User { get; set; }
+
+        public int ArticleId{ get;set; }
+
+        public virtual Article Article { get; set; }
+
+        public DateTime PostDate { get; set; } = DateTime.Now;
     }
 }

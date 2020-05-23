@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AspForum.Context.Migrations
 {
     [DbContext(typeof(ForumContext))]
-    [Migration("20200518145631_Init")]
+    [Migration("20200523215308_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,8 +56,11 @@ namespace AspForum.Context.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ArticleId")
+                    b.Property<int>("ArticleId")
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("PostDate")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Text")
                         .IsRequired()
@@ -107,6 +110,9 @@ namespace AspForum.Context.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Role")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.ToTable("Users");
@@ -127,9 +133,11 @@ namespace AspForum.Context.Migrations
 
             modelBuilder.Entity("AspForum.Context.Entities.Comment", b =>
                 {
-                    b.HasOne("AspForum.Context.Entities.Article", null)
+                    b.HasOne("AspForum.Context.Entities.Article", "Article")
                         .WithMany("Comments")
-                        .HasForeignKey("ArticleId");
+                        .HasForeignKey("ArticleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("AspForum.Context.Entities.User", "User")
                         .WithMany()

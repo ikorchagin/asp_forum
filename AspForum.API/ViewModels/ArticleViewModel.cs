@@ -2,9 +2,18 @@ using AspForum.Data.Models;
 
 namespace AspForum.API.ViewModels
 {
-    public class ArticleViewModel
+    public class SetArticleViewModel
     {
-        public ArticleViewModel(ArticleModel article)
+        public string Title { get; set; }
+
+        public string Text { get; set; }
+        
+        public int? RubricId { get; set; }
+    }
+    
+    public class GetArticleViewModel
+    {
+        public GetArticleViewModel(ArticleModel article)
         {
             Id = article.Id;
             Title = article.Title;
@@ -13,6 +22,7 @@ namespace AspForum.API.ViewModels
             RubricId = article.Rubric.Id;
             UserId = article.User.Id;
         }
+
         public int Id { get; set; }
 
         public string Title { get; set; }
