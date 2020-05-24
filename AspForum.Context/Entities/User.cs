@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
@@ -20,5 +21,10 @@ namespace AspForum.Context.Entities
         public string Role { get; set; }
 
         public virtual IEnumerable<Article> Articles { get; set; }
+
+        public object Select()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
