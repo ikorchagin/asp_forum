@@ -47,7 +47,7 @@ namespace AspForum.API.Controllers
         {
             if (User.Identity.IsAuthenticated) 
             {
-                return Ok($"U got authorized {User.FindFirst(ClaimTypes.)}");
+                return Ok($"U got authorized {User.FindFirst(ClaimTypes.Email)}");
             }
 
             return Unauthorized();
