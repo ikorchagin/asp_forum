@@ -22,9 +22,5 @@ namespace AspForum.Context.Entities
 
         public virtual IEnumerable<Article> Articles { get; set; }
 
-        public object Select()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

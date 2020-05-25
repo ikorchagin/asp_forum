@@ -32,6 +32,11 @@ namespace AspForum.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod().AllowAnyHeader().AllowCredentials().Build());
+            });
             services.AddScoped<IArticlesRepo, ArticlesRepo>()
                 .AddScoped<IRubricsRepo, RubricsRepo>()
                 .AddScoped<ICommentsRepo, CommentsRepo>()
@@ -67,9 +72,9 @@ namespace AspForum.API
 
             app.UseRouting();
 
-            app.UseAuthorization();
-
             app.UseAuthentication();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

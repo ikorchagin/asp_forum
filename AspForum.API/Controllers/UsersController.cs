@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using AspForum.API.ViewModels;
 using AspForum.Data.Repositories;
 using Microsoft.AspNetCore.Authorization;
@@ -42,9 +43,14 @@ namespace AspForum.API.Controllers
 
         [Authorize]
         [HttpGet("secret")]
-        public string SecretPage()
+        public ActionResult<string> SecretPage()
         {
-            return "U got access to this page";
+            if (User.Identity.IsAuthenticated) 
+            {
+                return Ok($"U got authorized {User.FindFirst(ClaimTypes.)}");
+            }
+
+            return Unauthorized();
         }
 
     }
